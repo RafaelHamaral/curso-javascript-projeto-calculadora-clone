@@ -6,9 +6,28 @@ class CalcController{
   constructor(){
 
     this._displayCalc = "0";
-    this._dataAtual; // this referencia a classe 
+    this._currentDate ; // this referencia a classe 
+    this.initialize();
 
   }  
+
+  //método principal do projeto
+  //tudo que eu quiser que aconteça assim que eu iniciar a calculadora sera colocado em initialize
+  //EL convençao do curso para referenciar ao elemento
+
+  initialize(){
+
+     let displayCalcEl = document.querySelector('#display');
+     let dateEl = document.querySelector('#data');
+     let timeEL = document.querySelector('#hora');
+
+     displayCalcEl.innerHTML =  "4567";
+     dateEl.innerHTML = "25/10/2020";
+     timeEL.innerHTML = "00:00"
+ 
+
+
+  }
 
 
   //recuperar e/ou atribuir valor a um atributo privado
@@ -25,15 +44,15 @@ class CalcController{
   }
 
 
-  get dataAtual(){
+  get currentDate(){
 
-    return this._dataAtual;
+    return this._currentDate ;
 
   }
 
-  set dataAtual(valor){
+  set currentDate(valor){
 
-    this.dataAtual = valor;
+    this.currentDate = valor;
 
   }
 
